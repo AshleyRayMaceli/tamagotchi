@@ -1,11 +1,20 @@
 <h1>Tamagotchi World!</h1>
-<img src="/default-tamagotchi.gif" alt="Your cute Tamagotchi!">
+
+#if ($myPet.isAlive() == false)
+<img src="/dead.jpg" alt="Your Tamagotchi died :(">
+#elseif ($myPet.getActivityLevel() > 10)
+<img src="/happy-whale.gif" alt="The whale is super happy!">
+#else
+<img src="/whale.gif" alt="The whale is happy to be your friendwhale">
+#end
+
 <h2>$myPet.getName()</h2>
 <h3>Current Food Level: $myPet.getFoodLevel()</h3>
 <h3>Current Sleep Level: $myPet.getSleepLevel()</h3>
 <h3>Current Happiness Level: $myPet.getActivityLevel()</h3>
 <h3>Current Poop Level: $myPet.getPoopLevel()</h3>
 
+#if ($myPet.isAlive())
 <form action="/tamagotchi" method="post">
   <input type="hidden" name="action" value="feed">
 <button type="submit" class="btn btn-success" id="feed">Feed $myPet.getName() a snack!</button>
@@ -25,3 +34,10 @@
   <input type="hidden" name="action" value="clean">
 <button type="submit" class="btn btn-danger" id="clean">Clean up $myPet.getName()'s poop!</button>
 </form>
+#else
+
+<form action="/" method="get">
+  <input type="hidden" name="action" value="clean">
+<button type="submit" class="btn btn-danger" id="restart">Hatch a new Tamagotchi?</button>
+</form>
+#end

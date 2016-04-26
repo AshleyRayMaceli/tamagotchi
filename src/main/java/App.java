@@ -12,6 +12,8 @@ public class App {
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
+      request.session().removeAttribute("myPet");
+
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -36,6 +38,7 @@ public class App {
           myPet.cleanUpPoop();
           myPet.timePasses();
         }
+        
         model.put("myPet", myPet);
       } else {
         String name = request.queryParams("name");

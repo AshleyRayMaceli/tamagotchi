@@ -28,7 +28,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     fill("#name").with("lil guy");
     submit(".btn");
-    assertThat(pageSource()).contains("Your cute Tamagotchi!");
+    assertThat(pageSource()).contains("Current Sleep Level:");
   }
 
   @Test
