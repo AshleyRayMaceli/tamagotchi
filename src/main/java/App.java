@@ -21,7 +21,7 @@ public class App {
       String name = request.queryParams("name");
       Tamagotchi myPet = new Tamagotchi(name);
 
-      model.put("myPet", myPet);      
+      model.put("myPet", myPet);
 
       model.put("template", "templates/tamagotchi.vtl");
       return new ModelAndView(model, layout);
