@@ -8,5 +8,20 @@
 
 <form action="/tamagotchi" method="post">
   <input type="hidden" name="action" value="feed">
-<button type="submit" class="btn btn-success" id="feed">Feed $myPet.getName() !</button>
+<button type="submit" class="btn btn-success" id="feed">Feed $myPet.getName() a snack!</button>
+</form>
+
+<form action="/tamagotchi" method="post">
+  <input type="hidden" name="action" value="nap">
+<button type="submit" class="btn btn-warning" id="nap">Let $myPet.getName() take a nap!</button>
+</form>
+
+<form action="/tamagotchi" method="post">
+  <input type="hidden" name="action" value="walk">
+<button type="submit" class="btn btn-info" id="walk">Take $myPet.getName() on a walk!</button>
+</form>
+
+<form action="/tamagotchi" method="post">
+  <input type="hidden" name="action" value="clean">
+<button type="submit" class="btn btn-danger" id="clean">Clean up $myPet.getName()'s poop!</button>
 </form>

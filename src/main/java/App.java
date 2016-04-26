@@ -26,6 +26,15 @@ public class App {
         if (action.equals("feed")) {
           myPet.feedPet();
           myPet.timePasses();
+        } else if (action.equals("nap")) {
+          myPet.napPet();
+          myPet.timePasses();
+        } else if (action.equals("walk")) {
+          myPet.walkPet();
+          myPet.timePasses();
+        } else if (action.equals("clean")) {
+          myPet.cleanUpPoop();
+          myPet.timePasses();
         }
         model.put("myPet", myPet);
       } else {
