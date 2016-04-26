@@ -36,4 +36,8 @@ public class Tamagotchi {
     mActivityLevel -= 1;
     mPoopLevel += 1;
   }
+
+  public boolean isAlive() {
+    return (mFoodLevel > 0 && mSleepLevel > 0 && mActivityLevel > 0 && mPoopLevel < 10);
+  }
 }

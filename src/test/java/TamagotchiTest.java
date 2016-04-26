@@ -18,4 +18,10 @@ public class TamagotchiTest {
     myPet.timePasses();
     assertEquals(9, myPet.getFoodLevel());
   }
+
+  @Test
+  public void isAlive_foodLevelAbove0_true() {
+    Tamagotchi myPet = new Tamagotchi("little whale");
+    assertEquals(true, myPet.isAlive());
+  }
 }
