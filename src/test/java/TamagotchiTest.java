@@ -24,4 +24,11 @@ public class TamagotchiTest {
     Tamagotchi myPet = new Tamagotchi("little whale");
     assertEquals(true, myPet.isAlive());
   }
+
+  @Test
+  public void isAlive_foodLevelBelow1_false() {
+    Tamagotchi myPet = new Tamagotchi("little whale");
+    myPet.setFoodLevel(0);
+    assertEquals(false, myPet.isAlive());
+  }
 }

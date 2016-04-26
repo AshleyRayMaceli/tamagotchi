@@ -37,6 +37,14 @@ public class Tamagotchi {
     mPoopLevel += 1;
   }
 
+  public void setFoodLevel(int modifier) {
+    mFoodLevel = modifier;
+  }
+
+  public void feedPet() {
+    mFoodLevel += 2;
+  }
+
   public boolean isAlive() {
     return (mFoodLevel > 0 && mSleepLevel > 0 && mActivityLevel > 0 && mPoopLevel < 10);
   }
