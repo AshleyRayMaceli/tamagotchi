@@ -18,6 +18,10 @@ public class App {
 
     post("/tamagotchi", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      String name = request.queryParams("name");
+      Tamagotchi myPet = new Tamagotchi(name);
+
+      model.put("myPet", myPet);      
 
       model.put("template", "templates/tamagotchi.vtl");
       return new ModelAndView(model, layout);
