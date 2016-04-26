@@ -10,6 +10,7 @@ public class TamagotchiTest {
     assertEquals(10, myPet.getFoodLevel());
     assertEquals(10, myPet.getSleepLevel());
     assertEquals(10, myPet.getActivityLevel());
+    assertEquals(0, myPet.getPoopLevel());
   }
 
   @Test
@@ -17,6 +18,16 @@ public class TamagotchiTest {
     Tamagotchi myPet = new Tamagotchi("little whale");
     myPet.timePasses();
     assertEquals(9, myPet.getFoodLevel());
+  }
+
+  @Test
+  public void timePasses_allAttributesProgressByOne_int() {
+    Tamagotchi myPet = new Tamagotchi("little whale");
+    myPet.timePasses();
+    assertEquals(9, myPet.getFoodLevel());
+    assertEquals(9, myPet.getSleepLevel());
+    assertEquals(9, myPet.getActivityLevel());
+    assertEquals(1, myPet.getPoopLevel());
   }
 
   @Test
@@ -31,4 +42,6 @@ public class TamagotchiTest {
     myPet.setFoodLevel(0);
     assertEquals(false, myPet.isAlive());
   }
+
+
 }

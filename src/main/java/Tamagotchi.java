@@ -30,6 +30,10 @@ public class Tamagotchi {
     return mActivityLevel;
   }
 
+  public int getPoopLevel() {
+    return mPoopLevel;
+  }
+
   public void timePasses() {
     mFoodLevel -= 1;
     mSleepLevel -= 1;
@@ -43,6 +47,18 @@ public class Tamagotchi {
 
   public void feedPet() {
     mFoodLevel += 2;
+  }
+
+  public void napPet() {
+    mSleepLevel += 2;
+  }
+
+  public void walkPet() {
+    mActivityLevel += 2;
+  }
+
+  public void cleanUpPoop() {
+    mPoopLevel -= 2;
   }
 
   public boolean isAlive() {
