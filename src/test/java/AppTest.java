@@ -28,7 +28,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     fill("#name").with("lil guy");
     submit(".btn");
-    assertThat(pageSource()).contains("Current Sleep Level:");
+    assertThat(pageSource()).contains("Sleep Level:");
   }
 
   @Test
@@ -36,7 +36,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     fill("#name").with("lil guy");
     submit(".btn");
-    assertThat(pageSource()).contains("Current Sleep Level: 10");
+    assertThat(pageSource()).contains("Sleep Level: 10");
   }
 
   @Test
@@ -45,7 +45,7 @@ public class AppTest extends FluentTest {
     fill("#name").with("lil guy");
     submit(".btn");
     submit("#feed");
-    assertThat(pageSource()).contains("Current Food Level: 11");
+    assertThat(pageSource()).contains("Food Level: 11");
   }
 
   @Test
@@ -57,10 +57,10 @@ public class AppTest extends FluentTest {
     submit("#nap");
     submit("#walk");
     submit("#clean");
-    assertThat(pageSource()).contains("Current Food Level: 8");
-    assertThat(pageSource()).contains("Current Sleep Level: 8");
-    assertThat(pageSource()).contains("Current Happiness Level: 8");
-    assertThat(pageSource()).contains("Current Poop Level: 2");
+    assertThat(pageSource()).contains("Food Level: 8");
+    assertThat(pageSource()).contains("Sleep Level: 8");
+    assertThat(pageSource()).contains("Happiness Level: 8");
+    assertThat(pageSource()).contains("Poop Level: 2");
   }
 
 

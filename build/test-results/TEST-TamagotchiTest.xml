@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TamagotchiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-26T22:44:16" hostname="epicodus-54.local" time="0.001">
+<testsuite name="TamagotchiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-26T23:17:23" hostname="epicodus-54.local" time="0.001">
   <properties/>
   <testcase name="timePasses_allAttributesProgressByOne_int" classname="TamagotchiTest" time="0.0"/>
   <testcase name="tamagotchi_instantiatesCorrectly" classname="TamagotchiTest" time="0.0"/>
   <testcase name="isAlive_foodLevelBelow1_false" classname="TamagotchiTest" time="0.0"/>
-  <testcase name="isAlive_foodLevelAbove0_true" classname="TamagotchiTest" time="0.0"/>
+  <testcase name="isAlive_foodLevelAbove0_true" classname="TamagotchiTest" time="0.001"/>
   <testcase name="timePasses_foodDecreasesByOne_9" classname="TamagotchiTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
