@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TamagotchiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-26T20:22:35" hostname="epicodus-54.local" time="0.001">
+<testsuite name="TamagotchiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-26T21:11:20" hostname="epicodus-54.local" time="0.001">
   <properties/>
   <testcase name="timePasses_allAttributesProgressByOne_int" classname="TamagotchiTest" time="0.0"/>
   <testcase name="tamagotchi_instantiatesCorrectly" classname="TamagotchiTest" time="0.0"/>

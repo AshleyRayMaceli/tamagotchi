@@ -4,4 +4,9 @@
 <h3>Current Food Level: $myPet.getFoodLevel()</h3>
 <h3>Current Sleep Level: $myPet.getSleepLevel()</h3>
 <h3>Current Happiness Level: $myPet.getActivityLevel()</h3>
-<h3>Current Poop Level: $myPet.getPoopLevel()</h3> 
+<h3>Current Poop Level: $myPet.getPoopLevel()</h3>
+
+<form action="/tamagotchi" method="post">
+  <input type="hidden" name="action" value="feed">
+<button type="submit" class="btn btn-success" id="feed">Feed $myPet.getName() !</button>
+</form>

@@ -39,4 +39,13 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Current Sleep Level: 10");
   }
 
+  @Test
+  public void feedButtonTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("lil guy");
+    submit(".btn");
+    submit("#feed");
+    assertThat(pageSource()).contains("Current Food Level: 11");
+  }
+
 }

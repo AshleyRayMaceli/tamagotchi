@@ -18,10 +18,22 @@ public class App {
 
     post("/tamagotchi", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      String name = request.queryParams("name");
-      Tamagotchi myPet = new Tamagotchi(name);
 
-      model.put("myPet", myPet);
+      if (request.session().attribute("myPet") != null) {
+        Tamagotchi myPet = request.session().attribute("myPet");
+
+        String action = request.queryParams("action");
+        if (action.equals("feed")) {
+          myPet.feedPet();
+          myPet.timePasses();
+        }
+        model.put("myPet", myPet);
+      } else {
+        String name = request.queryParams("name");
+        Tamagotchi myPet = new Tamagotchi(name);
+        request.session().attribute("myPet", myPet);
+        model.put("myPet", myPet);
+      }
 
       model.put("template", "templates/tamagotchi.vtl");
       return new ModelAndView(model, layout);
